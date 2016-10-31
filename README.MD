@@ -1,3 +1,14 @@
+
+# How to use
+
+```
+npm i && npm i -g bower && bower install
+```
+```
+gulp
+```
+
+
 'use strict';
 
 // Подключение модулей
