@@ -264,10 +264,11 @@
 	}
 	.container-top-menu {
 		width: 100%;
-		padding-top: 100px;
+		padding-top: 68px;
 		padding-bottom: 60px;
 		position: absolute;
 		top: 0;
+		bottom: 0;
 		left: -5000px;
 		margin: 0;
 		background-color: #00aeef;
@@ -277,10 +278,15 @@
 		}
 		.close-mob-menu {
 			position: absolute;
-			top: 54px;
-			left: 30px;
+			top: 29px;
+			left: 10px;
 			background: transparent;
 			border: 0;
+		    line-height: 13px;
+			img {
+				width: 15px;
+				height: 15px;
+			}
 		}
 	}
 	.top-menu {
@@ -293,13 +299,14 @@
 			a {
 				font-family: "FuturaBold";
 				color: #fff;
+			    letter-spacing: 2px;
 				&:hover {
 					color: #fff;
 				}
 			}
 		}
 		.mob-enter {
-			margin-top: 2em;
+			margin-top: 5em;
 			a {
 				color: #000;
 			}
@@ -326,6 +333,9 @@
 	.container-start-center #containerDescrTyped {
 		min-height: 10em;
 	  font-size: 1.875em;
+	  .link-in-typed a {
+	  	z-index: 1000;
+	  }
 	  span {
 	    font-size: 0.73em;
 	  }
