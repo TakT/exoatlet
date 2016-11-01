@@ -197,7 +197,8 @@
 		text-align: left;
 		.inner {
 			width: 120px;
-			margin-top: 1em;
+			// margin-top: 1em;
+			margin-top: 0;
 			transform: none;
 			display: flex;
 			justify-content: space-between;
@@ -265,7 +266,6 @@
 				.form-control, .btn-form {
 					height: 34px;
 					font-size: 15px;
-					margin-bottom: 
 				}
 				.form-control {
 					margin-bottom: 12px;
@@ -606,21 +606,32 @@
 	  	margin-bottom: 20px;
 	}
 	footer {
-		padding-top: 24px;
-		padding-bottom: 24px;
+		padding-top: 36px;
+		padding-bottom: 40px;
 	}
 	.container-footer-menu .container-menu {
 	  display: block;
-	  ul li {
-	    margin-top: 1em;
-	    margin-bottom: 1em;
-	    a {
-	      font-size: 0.875em;
-	    }
+	  ul {
+		li {
+			margin-top: 0;
+			margin-bottom: 20px;
+			a {
+			  font-size: 0.875em;
+			}
+		}	  	
 	  }
+	  	.menu__native {
+			li {
+				a {
+					text-decoration: none;
+					color: #00aeef;
+				}
+			}
+		}
 	}
 	.container-socials {
-		padding-top: 0.5em;
+	    margin-top: 7px;
+		display: inline-block;
 	}
 	.title_forms span {
 		font-size: 30px;
