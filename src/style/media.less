@@ -531,6 +531,7 @@
 		.block-news-date {
 			padding-top: 3em;
 			font-size: 1em;
+			font-family: "FuturaHeavy";
 			.date {
 				display: inline-block;
 				line-height: 2em;
@@ -543,6 +544,7 @@
 		}
 		.item-news {
 			padding-top: 0;
+			margin-bottom: 104px;
 		}
 	}
 	.section-news .item-news {
@@ -553,35 +555,65 @@
 	    display: none;
 	  }
 	  .col-news-thumb {
-	    width: 41%;
+      width: 132.3%;
+		  margin-left: -37px;
+		  display: inline-block;
 	  }
 	  .col-descr {
 	    width: 59%;
 	    margin-bottom: 1em;
-	    font-size: 1em;
+	    font-size: 12px;
+	    padding-top: 5px!important;
 	  }
 	}
 	.section-news .container-screen-number {
-	  top: 25%;
-	  left: -5%;
+    top: 200px;
+    left: -100px;
 	}
-	.section-news .row-bottom {
-	  display: block;
-	  margin-top: 100px;
-	  .container-descr {
-	    width: 100%;
-	    .title {
-			font-size: 2em;
-			line-height: 1em;
-	    }
-	    .descr {
-	    	font-size: 1.2em;
-	    }
+	.section-news {
+		overflow: hidden;
+		.screen-steps.screen__steps-black {
+	  	color: #fff;
 	  }
-	  .container-thumb {
-	    width: 74%;
-	    float: right;
-	  }
+		.item-news {
+			.col-more {
+				p:first-of-type {
+					height: 6px;
+				}
+				p.more-news {
+			  	font-size: 15px;
+			  	margin: 7px 0 0 -2px;
+			  }				
+			}
+		}
+		.row-bottom {
+		  display: block;
+		  margin-top: 5px;
+		  .container-descr {
+		    width: 100%;
+		    .title {
+			    font-size: 22px;
+			    line-height: 1em;
+			    margin-bottom: 15px;
+		    }
+		    .descr {
+		    	font-size: 15px;
+		    	margin-bottom: 15px;
+		    }
+		    p .link {
+		    	display: none;
+		    }
+		  }
+		  .screen-steps.screen__steps-black {
+		  	color: #fff;
+		  }
+		  .container-thumb {
+	      width: 91%;
+		    float: right;
+		    margin-right: -25px;
+        margin-bottom: 34px;
+		  }
+		}		
 	}
 	.section-mission {
 		background-size: 71% auto;
@@ -621,18 +653,17 @@
     line-height: 12px;
     vertical-align: top;
 	}
-	.section-mission {
+	
 		.container-screen__steps {
 			z-index: 2;
 		}
 		.screen-steps {
-	    bottom: 0;
+	    bottom: 0!important;
 	    width: 190px;
 	    position: relative;
 	    margin: auto;
       font-size: 12px;
 		}
-	}
 	.section-mission .container-link .divider.large {
 		height: 11px;
   	margin-bottom: 20px;
@@ -672,7 +703,7 @@
 
 @media screen and (max-width: 580px) {
   .item-news .col-news-thumb {
-    display: none;
+    // display: none;
   }
   .section-start .item-news .title + p {
   	margin-bottom: 1em;
