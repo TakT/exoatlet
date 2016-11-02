@@ -473,21 +473,29 @@
 			}
 		}
 	}
-	.section-numbers .row-img {
-	  text-align: center;
-	  &.center-row, &.bottom-row {
-	    margin-top: 72px;
-	  }
+	.section-numbers {
+    background-color: #00aeef;
+    padding-bottom: 35px;
+		.row-img {
+		  text-align: center;
+		  &.center-row, &.bottom-row {
+		    margin-top: 40px;
+		  }
+		  .text-number {
+		  	display: inline-block;
+		  }
+		  .descr {
+		    width: 82%;
+		    margin: 40px auto 0 auto;
+		    font-size: 15px;
+		  }
+		}		
 	}
 	.section-numbers .row-with-descr {
 	  display: block;
-	  .descr {
-	    width: 82%;
-	    margin: 2em auto 0 auto;
-	  }
 	}
 	.section-numbers .sect-inner {
-	  padding-bottom: 120px;
+	  padding-bottom: 40px;
 	}
 	.section-numbers .container-img {
 	  margin-left: auto;
@@ -504,21 +512,47 @@
 	      margin-left: auto;
 	      margin-right: auto;
 	    }
+	    .title {
+		    span {
+		  		font-size: 12px;
+		  		&:first-of-type {
+		  			font-size: 45px;
+		  		}
+		  	}
+		  }
+	  }
+	  img {
+	  	padding: 10px;
 	  }
 	  &.medium {
-	    width: 77.5%;
+	    width: 79%;
+	    .title {
+		    span {
+		  		font-size: 12px;
+		  		&:first-of-type {
+		  			font-size: 45px;
+		  		}
+		  	}
+		  }
 	  }
 	  &.small {
 	    width: 71%;
 	    .title span:first-of-type {
 	    	font-size: 3em;
 	    }
+	    span {
+	  		font-size: 12px;
+	  		&:first-of-type {
+	  			font-size: 36px;
+	  		}
+	  	}
 	  }
 	  .title {
 	  	span {
-	  		font-size: 1.25em;
+	    	margin-top: 8px;
+	  		font-size: 12px;
 	  		&:first-of-type {
-	  			font-size: 4em;
+	  			font-size: 36px;
 	  		}
 	  	}
 	  }
