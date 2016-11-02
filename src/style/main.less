@@ -782,12 +782,24 @@ a:hover {
 	margin-bottom: 220px;
 	font-size: 0;
 	margin-left: 0;
+	&:after {
+		content: '';
+	    width: 100%;
+	    background: #fff;
+	    height: 500px;
+	    display: inline-block;
+	    position: absolute;
+	    left: 0;
+	    top: 213px;
+	}
 }
 .section-for-home .container-moved img {
 	margin-left: 20px;
+	position: relative;
+	z-index: 5;
 }
 .section-for-home .container-moved img:first-of-type {
-	margin-left: 20px;
+	margin-left: 100px;
 }
 /* .section-inner {
 	display: table;
@@ -991,9 +1003,9 @@ a:hover {
 			font-size: 1.5em;
 			line-height: 1.5em;
 		}
-		.text-number {
-			display: none;
-		}
+	}
+	.text-number {
+		display: none;
 	}
 	.center-row {
 		margin-top: -12.8%;
@@ -1147,12 +1159,13 @@ a:hover {
 	background-size: 40% auto;
 	background-position: -25px -10px;
 	.container-descr {
-		padding-top: 8.5%;
+		padding-top: 9.5%;
 		.title {
 			margin-bottom: 0.5em;
 			margin-bottom: 45px;
 			font-family: "FuturaBold";
 			font-size: 7.5em;
+    		line-height: 105px;
 		}
 		.descr {
 			width: 57%;
@@ -1200,19 +1213,29 @@ footer {
 		display: -webkit-flex;
 		justify-content: space-between;
 		-webkit-box-pack: center;
-		ul li {
-			margin: 1.25em 0;
-			list-style-type: none;
-			a {
-				font-family: "FuturaHeavy";
-				font-size: 0.75em;
-				color: #060606;
-				text-transform: uppercase;
+		ul {
+			li {
+				margin: 1.25em 0;
+				list-style-type: none;
+				a {
+					font-family: "FuturaHeavy";
+					font-size: 0.75em;
+					color: #060606;
+					text-transform: uppercase;
+				}
+				a:hover {
+					color: @blue;
+				}
 			}
-			a:hover {
-				color: @blue;
+			&.menu__native {
+				li {
+					a {
+					    color: #00aeef;
+					    text-decoration: none;
+					}
+				}
 			}
-		}
+		} 
 	}
 }
 .container-socials {
