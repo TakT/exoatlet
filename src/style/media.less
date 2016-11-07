@@ -67,6 +67,7 @@
 	}
 	.section-for-home .section-main-img {
 		padding-bottom: 0;
+	    padding-right: 52.5%;
 		.container-home-inner {
 			.screen-number {
 					margin-top: 0;
@@ -219,6 +220,9 @@
 	.container-screen-steps .screen-steps {
 		max-width: 290px;
 	}
+	.container-enter-abs {
+	position: absolute;		
+	}
 	.container-enter {
 		width: 100%;
 		top: 0;
@@ -226,6 +230,7 @@
 		display: none;
 		.container-inner {
 			min-height: 850px;
+			background: #e7e7e7;
 		}
 		.nav-tabs > li > a {
 			font-size: 15px;
@@ -239,6 +244,17 @@
     			span {
 			    	height: 2px;
     			}
+			}
+		}
+		.container-btn-registr .link-registr {
+			font-size: 15px;
+		} 
+		.container-registr-form {
+			.btn-form, .link-back {
+				font-size: 15px;
+			}
+			.registr-title {
+			    font-size: 34px;
 			}
 		}
 		.close-form {
@@ -461,6 +477,9 @@
 		    height: 330px;
     		margin-left: -83px;
 		}
+		.line-cover {
+		    // margin-left: -59px;
+		}
 		.section-main-img .container-home-inner .block-more .divider.thick {
 			height: 12px;
 		}
@@ -469,9 +488,11 @@
 			.link {
 				font-size: 12px;
 				line-height: 12px;
+			    margin-bottom: 5px;
 			}
 		}
 		.controls-block {
+		    padding-top: 35px;
 			.container-controls {
 				position: relative;
 				.container-slide-numbers {
@@ -501,7 +522,7 @@
 			}
 		}
 		.slick-home {
-			margin-top: 20px;
+			margin-top: 10px;
 			margin-bottom: 0;
 			padding-bottom: 50px;
 			background: #fff;
