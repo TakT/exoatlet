@@ -263,6 +263,10 @@ jQuery(document).ready(function ($) {
 				});
 			}
 		});
+		$('.slick-home').on('swipe', function(event, slick, direction){
+			slideNum2 = $(this).parents('#pinHome').find('.slick-center').index()+1;
+			$('#slControlsHome .mobile-container-slide-numbers .current').text(slideNum2);
+		});
 
 		$('#movedLeft').on('click', function () {
 			var visible = $(window).width() - parseInt($('.section-for-home .container-moved').css('marginLeft')),
@@ -276,7 +280,6 @@ jQuery(document).ready(function ($) {
 					mov = wImg - visible;
 					marg = parseInt($('.container-moved').css('marginLeft')) - mov;
 					activatorArrL = false;
-					console.log($(this).index());
 					if ($(this).index() == 4) {
 						$('.slControlsHome').find('.visible-arr').addClass('visible-arr');
 						$('#movedLeft').addClass('visible-arr');
@@ -286,6 +289,7 @@ jQuery(document).ready(function ($) {
 					slideNum = $(this).index() + 1;
 				} else {
 					wImg += $(this).outerWidth(true);
+					slideNum = $(this).index() + 1;
 				}
 			});
 			if (($('.container-moved').offset().left - mov + $('.container-moved').outerWidth()) <= $(window).outerWidth()) {
@@ -293,6 +297,8 @@ jQuery(document).ready(function ($) {
 			}
 			$('.container-moved').css('marginLeft', marg);
 			$('#slControlsHome .current').text(slideNum);
+			slideNum2 = $(this).parents('#pinHome').find('.slick-center').prev().index()+1;
+			$('#slControlsHome .mobile-container-slide-numbers .current').text(slideNum2);
 		});
 		$('#movedRight').on('click', function () {
 			var visible = $(window).width() - parseInt($('.section-for-home .container-moved').css('marginLeft')),
@@ -315,7 +321,6 @@ jQuery(document).ready(function ($) {
 					marg = parseInt($('.container-moved').css('marginLeft')) + mov;
 					activatorArrR = false;
 
-					console.log($(this).index());
 					if ($(this).index() == 1) {
 						// $('.slControlsHome').find('.visible-arr').addClass('visible-arr');
 						$('#movedRight').addClass('visible-arr');
@@ -327,15 +332,19 @@ jQuery(document).ready(function ($) {
 					wImg += $(this).outerWidth(true);
 				}
 			});
+			slideNum2 = $(this).parents('#pinHome').find('.slick-center').next().index()+1;
 			$('.container-moved').css('marginLeft', marg);
 			$('#slControlsHome .current').text(slideNum);
+			$('#slControlsHome .mobile-container-slide-numbers .current').text(slideNum2);
 		});
 	}
 
 	//СЛАЙДЕРЫ
 	$('.slick-home').slick({
-		slidesToShow: 2,
+		slidesToShow: 1,
+		infinite: false,
 		mobileFirst: true,
+		centerMode: true,
 		// dots: true,
 		// variableWidth: true,
 		appendArrows: $('#slControlsHome'),

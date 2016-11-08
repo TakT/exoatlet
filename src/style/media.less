@@ -112,6 +112,15 @@
 			.container-slide-numbers {
 				display: none;
 			}
+			.mobile-container-slide-numbers {
+				display: block!important; 
+			}
+			div.slick-arrow {
+				display: inline-block!important;
+			}
+			div.slick-disabled {
+				display: none!important;
+			}
 		}
 		.slick-home {
 			margin-top: 20px;
@@ -487,6 +496,11 @@
     		margin-left: -83px;
 		}
 		.line-cover {
+		    height: 20px;
+		    width: 278px;
+		    margin-left: -83px;
+		}
+		.line-cover {
 		    // margin-left: -59px;
 		}
 		.section-main-img .container-home-inner .block-more .divider.thick {
@@ -505,18 +519,19 @@
 			.container-controls {
 				position: relative;
 				.container-slide-numbers {
-					display: inline-block;
+					// display: inline-block;
 					font-size: 9px;
 				    position: absolute;
-				    left: 45px;	
-				    top: -6px;
+			        left: 60px;
+    				top: 3px;
 					.current {
 						font-size: 12px;
 					}
 				}		
 				.control-left {
-					display: none!important;
+					// display: none!important;
 				}		
+
 				.controls {
 			    	width: 15px;
 			    	height: 9px;
@@ -525,7 +540,7 @@
 			    .control-right {
 				    background-position: 0 -9px;
 				    margin-left: 5px;
-			        top: -9px;
+			        // top: -9px;
     				position: relative;
 				}
 			}
