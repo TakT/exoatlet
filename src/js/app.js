@@ -289,13 +289,12 @@ jQuery(document).ready(function ($) {
 					slideNum = $(this).index() + 1;
 				} else {
 					wImg += $(this).outerWidth(true);
-					slideNum = $(this).index() + 1;
 				}
 			});
 			if (($('.container-moved').offset().left - mov + $('.container-moved').outerWidth()) <= $(window).outerWidth()) {
 				marg -= $('.container-moved').offset().left + $('.container-moved').outerWidth() - $(window).outerWidth() - mov;
 			}
-			$('.container-moved').css('marginLeft', marg);
+			$('.container-moved').animate({'marginLeft':marg},500);
 			$('#slControlsHome .current').text(slideNum);
 			slideNum2 = $(this).parents('#pinHome').find('.slick-center').prev().index()+1;
 			$('#slControlsHome .mobile-container-slide-numbers .current').text(slideNum2);
@@ -333,7 +332,7 @@ jQuery(document).ready(function ($) {
 				}
 			});
 			slideNum2 = $(this).parents('#pinHome').find('.slick-center').next().index()+1;
-			$('.container-moved').css('marginLeft', marg);
+			$('.container-moved').animate({'marginLeft':marg},500);
 			$('#slControlsHome .current').text(slideNum);
 			$('#slControlsHome .mobile-container-slide-numbers .current').text(slideNum2);
 		});
