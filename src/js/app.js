@@ -83,7 +83,7 @@ jQuery(document).ready(function ($) {
 			var sceneNumberScale = new ScrollMagic.Scene({
 					triggerElement: "#triggerScale",
 					duration: $('.section-numbers').offset().top - $('#triggerScale').offset().top,
-					triggerHook: 0.2,
+					triggerHook: 0.02,
 					reverse: true
 				})
 				.addTo(controller)
@@ -94,7 +94,7 @@ jQuery(document).ready(function ($) {
 					});
 				})
 				.on("progress", function (e) {
-					var bgOp = e.progress.toFixed(3);
+					var bgOp = e.progress.toFixed(5);
 					var scale = e.progress.toFixed(3) * 10;
 					var dir = e.target.controller().info("scrollDirection");
 					if (scale <= 1) {
