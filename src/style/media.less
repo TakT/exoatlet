@@ -126,7 +126,7 @@
 			margin-top: 20px;
 			margin-bottom: 50px;
 			img {
-				padding: 0 15px;
+				padding: 0 7px;
 			}
 		}
 	}
@@ -225,6 +225,12 @@
 }
 
 @media only screen and (max-width: 767px) {
+	body.modal-hidden {
+		overflow: hidden;
+	}
+	.slick-list {
+		padding: 0 50px 0 10px!important;
+	}
 	.link {
 		font-size: 0.875em;
 	}
@@ -239,6 +245,15 @@
 		top: 0;
 		right: 0;
 		display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* z-index: 1050; */
+    background-color: #e7e7e7;
 		.container-inner {
 			min-height: 850px;
 			background: #e7e7e7;
@@ -261,6 +276,15 @@
 			font-size: 15px;
 		} 
 		.container-registr-form {
+			.inner {
+				min-width: 248px;
+				.form-control {
+					height: 34px;
+				}
+				.btn-form {
+					height: 41px;
+				}
+			}
 			.btn-form, .link-back {
 				font-size: 15px;
 			}
@@ -296,6 +320,7 @@
 				.form-control, .btn-form {
 					height: 34px;
 					font-size: 15px;
+					min-width: 248px;
 				}
 				.form-control {
 					margin-bottom: 12px;
@@ -549,7 +574,22 @@
 			margin-top: 10px;
 			margin-bottom: 0;
 			padding-bottom: 50px;
-			background: #fff;
+			// background: #fff;
+			position: relative;
+			&:after {
+		    content: '';
+		    width: 100%;
+		    background: #fff;
+		    height: 200px;
+		    display: inline-block;
+		    position: absolute;
+		    left: 0;
+		    top: 43px;
+			}
+			.slick-list {
+				position: relative;
+				z-index: 2;
+			}
 		}
 		.container-screen__steps {
 		    padding: 0 0 35px 0;
@@ -570,7 +610,7 @@
 		padding-bottom: 0;
 		overflow: hidden;
 		background-size: auto 70%;
-		background-position: 64px 100%;
+		background-position: -18px 100%;
 	}
 	.section-for-hospital .contaner-descr {
 		margin-bottom: 289px;
@@ -588,6 +628,7 @@
 		  }
 		  .section-title {
 		  	margin-top: 55px;
+  	    width: 77%;
 		  }
 		}
 	}
@@ -804,7 +845,7 @@
 		}
 		.item-news {
 			padding-top: 0;
-			margin-bottom: 104px;
+			margin-bottom: 10px;
 		}
 	}
 	.section-news .item-news {
@@ -975,7 +1016,7 @@
   }
 	.section-news .container-screen-number {
 		top: 200px;
-    top: 20.6%;
+    top: 23.6%;
 		left: -100px;
 		left: -25.5vw;
 	}
@@ -990,7 +1031,7 @@
 	}
 	.section-news .container-screen-number {
     top: 200px;
-    top: 21.6%;
+    top: 23.6%;
     left: -100px;
     left: -28%;
 	}
@@ -998,7 +1039,7 @@
 @media screen and (max-width: 400px) { 
 	.section-news .container-screen-number {
     top: 200px;
-    top: 22%;
+    top: 25%;
     left: -100px;
     left: -29.2%;
 	}
@@ -1013,7 +1054,7 @@
 @media screen and (min-width: 400px) and (max-width: 420px) {
 	.section-news .container-screen-number {
     top: 200px;
-    top: 21.6%;
+    top: 23.6%;
     left: -100px;
     left: -28.2%;
 	}
@@ -1028,7 +1069,7 @@
 @media screen and (max-width: 360px) { 
 	.section-news .container-screen-number {
     top: 200px;
-    top: 21.6%;
+    top: 24.6%;
     left: -100px;
     left: -29.5%;;
 	}
@@ -1036,7 +1077,7 @@
 @media screen and (max-width: 350px) { 
 	.section-news .container-screen-number {
     top: 200px;
-    top: 21.6%;
+    top: 24.6%;
     left: -100px;
     left: -31%;;
 	}

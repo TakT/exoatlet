@@ -344,6 +344,7 @@ jQuery(document).ready(function ($) {
 		infinite: false,
 		mobileFirst: true,
 		centerMode: true,
+		// variableWidth: 270,
 		// dots: true,
 		// variableWidth: true,
 		appendArrows: $('#slControlsHome'),
@@ -399,6 +400,7 @@ jQuery(document).ready(function ($) {
 	$('.container-enter .close-form').on('click', function () {
 		if ($('.container-top-menu').hasClass('opened')) {
 			$('.container-top-menu').removeClass('opened');
+			$('body').removeClass('modal-hidden');
 		}
 		if ($( document ).width()<768) {
 			$(this).parents('.container-enter').hide();
@@ -428,6 +430,10 @@ jQuery(document).ready(function ($) {
 		$(this).parents('.container-inner').children().not('.close-form').hide();
 		$('.container-registr-form').show();
 		$('.container-enter').addClass('container-enter-abs');
+		console.log($(window).width());
+		if ($(window).width()<768) {
+			$('body').addClass('modal-hidden');			
+		}
 	});
 	$('.link-back').on('click', function () {
 		$('.container-enter .container-inner').children().show();
@@ -444,6 +450,7 @@ jQuery(document).ready(function ($) {
 		} else {
 			$('.container-top-menu').toggleClass('opened');
 		}
+		$('body').removeClass('modal-hidden');		
 	});
 
 
