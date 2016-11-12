@@ -1068,11 +1068,11 @@ label.error {
 		align-items: center;
 		-webkit-box-align: center;
 		width: 100%;
-		.descr {
-			width: 41%;
-			font-size: 1.5em;
-			line-height: 1.5em;
-		}
+	}
+	.descr {
+		width: 41%;
+		font-size: 1.5em;
+		line-height: 1.5em;
 	}
 	.text-number {
 		display: none;
@@ -1112,9 +1112,16 @@ label.error {
 				line-height: 1em;
 			}
 		}
+		&:hover + .text-number {
+			display: block;
+			margin-top: 15%;
+		}
 	}
 	.container-img.large {
 		width: 47%;
+		&:hover + .text-number {
+		    margin-top: 0;
+		}
 	}
 	.container-img.medium {
 		width: 38.5%;
@@ -1122,10 +1129,16 @@ label.error {
 	.container-img.small {
 		width: 35%;
 		margin-left: 24.4%;
+	    float: left;
+    	margin-right: 50px;
 		.title {
 			span:first-of-type {
 				font-size: 4.56em;
 			}
+		}
+		&:hover + .text-number {
+		    width: 33%;
+    		float: left;
 		}
 	}
 }

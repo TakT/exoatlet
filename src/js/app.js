@@ -198,15 +198,17 @@ jQuery(document).ready(function ($) {
 		var act = true;
 
 		$(window).on('scroll', function () {
+			console.log('scroll1');
 			var posMovedTop = $('.section-for-home .container-moved').offset().top - $(window).outerHeight() * 0.45,
 				posMovedBottom = posMovedTop + 300;
 			screenPos = $(window).scrollTop();
 			if (screenPos >= posMovedTop & screenPos <= posMovedBottom & act) {
+				console.log('scroll2');
 
 				var activatorL = true,
 					activatorR = true;
 				$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function (event) {
-
+					console.log('scroll3');
 					var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail),
 						$moved = $('.section-for-home .container-moved'),
 						step = 300,
@@ -246,6 +248,7 @@ jQuery(document).ready(function ($) {
 						var wImg = $('.container-moved').children().first().outerWidth(true),
 							visible = $(window).width() - movedLeft,
 							act2 = true;
+							console.log('scroll4');
 						$('.container-moved').children().each(function () {
 
 							if (visible <= wImg & act2) {
@@ -258,6 +261,12 @@ jQuery(document).ready(function ($) {
 								wImg += $(this).outerWidth(true);
 							}
 						});
+						if (slideNum == 5) {
+							$('#slControlsHome').find('.visible-arr').removeClass('visible-arr');
+							$('#movedLeft').addClass('visible-arr');
+						} else {
+							$('#slControlsHome').find('.visible-arr').removeClass('visible-arr');
+						}
 						$('#slControlsHome .current').text(slideNum);
 					}
 				});
@@ -388,7 +397,7 @@ jQuery(document).ready(function ($) {
 	    var container = $(".container-enter");
 	    var container2 = $(".container-top-menu");
 	    if ((container.has(e.target).length === 0) && (container2.has(e.target).length === 0) && ($( document ).width()>768)){
-	    	console.log('sdfsdf');
+	    	// console.log('sdfsdf');
 	        if ($('.container-top-menu').hasClass('opened')) {
 				$('.container-top-menu').removeClass('opened');
 			}
