@@ -198,34 +198,47 @@ jQuery(document).ready(function ($) {
 		var act = true;
 
 		$(window).on('scroll', function () {
-			console.log('scroll1');
 			var posMovedTop = $('.section-for-home .container-moved').offset().top - $(window).outerHeight() * 0.45,
 				posMovedBottom = posMovedTop + 300;
 			screenPos = $(window).scrollTop();
-			if (screenPos >= posMovedTop & screenPos <= posMovedBottom & act) {
-				console.log('scroll2');
+			console.log(screenPos);
+			if (screenPos >= 1600 && screenPos <= 2200) {
+
+			// $( ".container-moved" ).hover(
+  	// 		function() {
+				
 
 				var activatorL = true,
 					activatorR = true;
 				$(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function (event) {
-					console.log('scroll3');
+					
 					var delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail),
 						$moved = $('.section-for-home .container-moved'),
 						step = 300,
 						movedLeft = parseInt($moved.css('marginLeft'));
-					if (screenPos >= posMovedTop) {
 						event.preventDefault();
+						// console.log(delta);
 
 						if (delta >= 0 & activatorR) {
-							movedLeft += step;
-							if (movedLeft >= $(window).outerWidth()) {
-								movedLeft = $(window).outerWidth();
+								// console.log(movedLeft);
+								// console.log($(window).outerWidth());
+								// console.log(slideNum);
+							
+							if (slideNum <= 3) {
+								// movedLeft = $(window).outerWidth();
 								activatorR = false;
 								$(window).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
+								// console.log('scroll2');
+								// movedLeft -= 150;
+							}
+							else {
+								movedLeft += step;
 							}
 							$moved.css('marginLeft', movedLeft);
 							activatorL = true;
+							// console.log('scroll1');
 						} else if (delta < 0 & activatorL) {
+							// console.log('scroll3');
 							movedLeft -= step;
 							// if (movedLeft <= $('.container').offset().left) {
 							if (($moved.offset().left + $moved.outerWidth() - step) <= $(window).outerWidth()) {
@@ -233,7 +246,7 @@ jQuery(document).ready(function ($) {
 					  		activatorL = false;*/
 								movedLeft = $(window).outerWidth() - $moved.outerWidth();
 								activatorL = false;
-								act = false;
+								// act = false;
 								if (delta < 0) {
 									$(window).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
 								}
@@ -248,7 +261,6 @@ jQuery(document).ready(function ($) {
 						var wImg = $('.container-moved').children().first().outerWidth(true),
 							visible = $(window).width() - movedLeft,
 							act2 = true;
-							console.log('scroll4');
 						$('.container-moved').children().each(function () {
 
 							if (visible <= wImg & act2) {
@@ -268,8 +280,8 @@ jQuery(document).ready(function ($) {
 							$('#slControlsHome').find('.visible-arr').removeClass('visible-arr');
 						}
 						$('#slControlsHome .current').text(slideNum);
-					}
 				});
+			// });
 			}
 		});
 		$('.slick-home').on('swipe', function(event, slick, direction){
