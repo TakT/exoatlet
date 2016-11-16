@@ -846,6 +846,12 @@ label.error {
 	margin-top: 36px;
 	margin-bottom: 220px;
 }
+.section-for-home .slick-track {
+	margin-left: -300px;
+}
+.section-for-home .slick-slide {
+	margin: 0 7px;
+}
 .section-for-home .container-moved {
 	margin-top: 36px;
 	margin-bottom: 220px;
@@ -940,7 +946,7 @@ label.error {
 	}
 }
 .controls {
-	display: inline-block;
+	display: inline-block!important;
 	width: 30px;
 	height: 18px;
 	background-image: url(../img/slider-controls.png);
@@ -949,6 +955,7 @@ label.error {
 	&.slick-disabled {
 		// opacity: 0.5;
 		opacity: 1;
+		display: none!important;
 	}
 }
 .control-right {
